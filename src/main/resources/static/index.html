@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de la Vida</title>
+    <style>
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(10, 20px);
+            grid-template-rows: repeat(10, 20px);
+        }
+        .cell {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+        }
+        .alive {
+            background-color: green;
+        }
+        .dead {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>Conway's Game of Life</h1>
+<div id="grid"></div>
+
+<script>
+    fetch('/api/game-state')
+        .then(response => response.json())
+        .then(data => {
+            console.log("Estado del juego:", data.grid);
+            // Aquí luego pintamos el grid con JS
+        });
+</script>
+</body>
+</html>
+
