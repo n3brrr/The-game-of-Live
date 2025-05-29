@@ -1,5 +1,4 @@
-**Hello README
-**# 🌱 The Game of Live
+### 🌱 The Game of Live
 
 ¡Bienvenido al universo digital donde la vida evoluciona célula a célula!  
 **The Game of Live** es una implementación interactiva del famoso autómata celular ideado por John Conway, pero con un giro: aquí, además de observar las reglas de la vida, puedes experimentar y modificar el entorno a tu antojo.
