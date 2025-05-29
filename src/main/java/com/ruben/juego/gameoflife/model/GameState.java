@@ -1,4 +1,4 @@
-package model;
+package com.ruben.juego.gameoflife.model;
 
 public class GameState {
     private boolean[][] cells;

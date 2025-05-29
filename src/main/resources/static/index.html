@@ -1,39 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Juego de la Vida</title>
-    <style>
-        #grid {
-            display: grid;
-            grid-template-columns: repeat(10, 20px);
-            grid-template-rows: repeat(10, 20px);
-        }
-        .cell {
-            width: 20px;
-            height: 20px;
-            border: 1px solid #ccc;
-        }
-        .alive {
-            background-color: green;
-        }
-        .dead {
-            background-color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>Conway's Game of Life</h1>
-<div id="grid"></div>
+<h1>Juego de la Vida</h1>
 
-<script>
-    fetch('/api/game-state')
-        .then(response => response.json())
-        .then(data => {
-            console.log("Estado del juego:", data.grid);
-            // Aquí luego pintamos el grid con JS
-        });
-</script>
+<div class="controls">
+    <button id="start-game">Iniciar Juego</button>
+    <button id="next-gen">Siguiente generación</button>
+    <button id="reset">Reiniciar</button>
+    <button id="toggle-auto">▶️ Auto</button>
+    <button id="toggle-dark">🌙 Modo Oscuro</button>
+</div>
+
+<div id="game-board"></div>
+
+<script src="/js/juego.js"></script>
 </body>
 </html>
-
